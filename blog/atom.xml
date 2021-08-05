@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://dev-blog.zeal.com/blog</id>
+    <title>zeal open mono Blog</title>
+    <updated>2015-10-25T23:29:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://dev-blog.zeal.com/blog"/>
+    <subtitle>zeal open mono Blog</subtitle>
+    <icon>https://dev-blog.zeal.com/img/favicon.ico</icon>
+</feed>
