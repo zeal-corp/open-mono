@@ -10,7 +10,7 @@ jobs:
   test-matrix:
     strategy:
       matrix:
-        node: ["14", "16"]
+        node: ["16"]
     name: release on node ${{ matrix.node }}
     runs-on: ubuntu-latest
     steps:
