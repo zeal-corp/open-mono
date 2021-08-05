@@ -1,0 +1,27 @@
+{
+  "name": "open-mono",
+  "version": "1.0.0",
+  "description": "zeal's open source monorepo",
+  "main": "index.js",
+  "repository": "git@github.com:zeal-corp/open-mono.git",
+  "author": "zeal <jobs@zeal.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "blog"
+  ],
+  "scripts": {
+    "docs": "cd blog && yarn docs",
+    "semantic-release": "yarn workspaces foreach -iv run semantic-release",
+    "lint": "yarn workspaces foreach -piv run lint"
+  },
+  "dependencies": {
+    "@yarnpkg/pnpify": "3.0.0-rc.14",
+    "eslint": "7.32.0",
+    "prettier": "2.3.2",
+    "typescript": "4.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "14.17.7"
+  }
+}

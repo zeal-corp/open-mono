@@ -1,0 +1,36 @@
+name: release
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  test-matrix:
+    strategy:
+      matrix:
+        node: ["14", "16"]
+    name: release on node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: select node version
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+      - name: cache build artifacts
+        id: cache-build-stuff
+        uses: actions/cache@v1
+        with:
+          path: ./.yarn
+          key: build-${{ matrix.node }}-${{hashFiles('./yarn.lock')}}
+          restore-keys: build-${{ matrix.node }}-${{hashFiles('./yarn.lock')}}
+      - name: install
+        run: yarn install
+      - name: semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.MAIN_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: yarn semantic-release
