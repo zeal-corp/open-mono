@@ -3,7 +3,7 @@ module.exports = {
   title: "zeal open mono",
   tagline: "on culture, problems, and solutions",
   url: "https://dev-blog.zeal.com",
-  baseUrl: "/",
+  baseUrl: "/open-mono/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
