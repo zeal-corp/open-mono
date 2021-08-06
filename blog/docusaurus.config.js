@@ -50,7 +50,7 @@ module.exports = {
           items: [
             {
               label: "latest",
-              to: "/docs/posts/index",
+              to: "/docs/posts/testing-at-zeal",
             },
           ],
         },
