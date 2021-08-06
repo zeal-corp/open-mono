@@ -3,7 +3,6 @@ import mermaid from "mermaid";
 
 const DEFAULT_CONFIG = {
   startOnLoad: true,
-  theme: "forest",
   logLevel: "fatal",
   securityLevel: "strict",
   arrowMarkerAbsolute: false,
@@ -28,17 +27,10 @@ const DEFAULT_CONFIG = {
     showSequenceNumbers: true,
     fontFamily: '"Jet Brains Mono", "sans-serif"',
   },
-  gantt: {
-    titleTopMargin: 25,
-    barHeight: 20,
-    barGap: 4,
-    topPadding: 50,
-    leftPadding: 75,
-    gridLineStartPadding: 35,
-    fontSize: 11,
-    fontFamily: '"Open-Sans", "sans-serif"',
-    numberSectionStyles: 4,
-    axisFormat: "%Y-%m-%d",
+  themeVariables: {
+    lineColor: "#ffffff",
+    textColor: "#ffffff",
+    primaryColor: "#ffffff",
   },
 };
 
