@@ -1,0 +1,150 @@
+import Mermaid from "../../src/components/Mermaid";
+
+# how zeal writes and runs tests
+
+## overview
+
+at zeal we are big proponents of the [mono-repo](https://en.wikipedia.org/wiki/Monorepo), and with it the simplified process of running [e2e](https://www.browserstack.com/guide/end-to-end-testing) tests on a per commit/per deploy basis. when we began planning for including a set of e2e tests, we wanted to be very intentional about setup and running of our tests. in the end we landed on a few techs and approaches, but first we want to diagram our standard pull request flow, so we can make clear where we want to run these tests, and when/how often they need to be run:
+
+export const chart = `sequenceDiagram
+    participant G as GitHub
+    participant J as Jenkins
+    participant E as Executor
+    G->>J: A new MR has been opened!
+    J->>G: Great, where is my script to run?
+    G->>J: Here it is, '<some-flippin-path>.gvy'!
+    J->>E: Please run this script and tell me what happens.
+    E->>J: Here is the result of running that script!
+    J->>G: Here is your red 'x' buddy! (occasional success can occurr)
+`;
+
+<Mermaid chart={chart} />
+
+## naming
+
+as important as the code itself is the ceremony of choosing a name. as a shop with a star trek _enthusiast_ skewed shop (meaning people allow my fandom and support it), we've been choosing specific character names for our packages. we ended up going with `weyoun` a vorta administrator, to speak to weyoun's unwavering administrative oversight of our code quality.
+
+## tech
+
+for testing, we wanted to continue to use a pure js stack, and so we took a look at various js packages, like [selenium](https://www.selenium.dev/), [cypress](https://www.cypress.io/), [TestCafe](https://testcafe.io/), [playwright](https://playwright.dev/), and more. in the end we wanted:
+
+1. stable tests, that run the same way each commit
+1. evergreen browser coverage, for multiple platforms
+1. decent docs with a stable long term support plan
+1. low devops overhead
+
+we these constraints in mind we ended up settling on [playwright](https://playwright.dev/). it provieds the runners and drive connection, and it provides safari, edge, chrome, and firefox automation. the docs are very good, and with [vs code](https://code.visualstudio.com/) the `editor du jour`, we feel far more confidence than we should in $MSFT's continued developer benevolence.
+
+## approach
+
+after much ado about how to write tests, we landed on an approach; at the core of weyoun are [poms](https://playwright.dev/docs/pom). poms provide an abstraction for testing. the core value of a pom:
+
+- the test is free from DOM specific configuration
+- unifies the use of a single unit of the application
+- allows all tests relying on one pom to be updated when it updates
+- reduces cognitive load of mapping components to their tests
+
+let's show an example pom!
+
+```ts title='weyoun/src/pom/login/index.ts'
+import { Page } from "playwright";
+import { Envs, getBaseUrl, getUser } from "../../utils";
+
+export const LoginSelectors = {
+  email: "data-test-id=user-email",
+  password: "data-test-id=user-password",
+  submit: "data-test-id=user-submit",
+};
+
+export class LoginPage {
+  page: Page;
+
+  constructor(page: Page) {
+    this.page = page;
+  }
+
+  async login(envOverride?: Envs): Promise<void> {
+    const user = getUser(envOverride);
+    await this.page.goto(`${getBaseUrl(envOverride)}/login`);
+    await this.page.fill(LoginSelectors.email, user.user);
+    await this.page.fill(LoginSelectors.password, user.password);
+    await this.page.click(LoginSelectors.submit);
+  }
+}
+```
+
+let's dive in!
+
+## selectors
+
+```ts
+export const LoginSelectors = {
+  email: "data-test-id=user-email",
+  password: "data-test-id=user-password",
+  submit: "data-test-id=user-submit",
+};
+```
+
+the selectors are how our pom interacts with the dom. we use `data-test-id` for all of our clicking and interactions! using this means we can refactor a react component and as long as the data-test-id goes on the new interactive component the pom needs no updates!
+
+this separation also makes it clear to the developer exactly what the id is used for!
+
+you'll see our tests occasionally import a selector to handle some DOM check, this is a good pattern!
+
+## methods
+
+```ts
+  async login(envOverride?: Envs): Promise<void> {
+    const user = getUser(envOverride);
+    await this.page.goto(`${getBaseUrl(envOverride)}/login`);
+    await this.page.fill(LoginSelectors.email, user.user);
+    await this.page.fill(LoginSelectors.password, user.password);
+    await this.page.click(LoginSelectors.submit);
+  }
+```
+
+this is a great example of a clean modular test section, it:
+
+- uses a util to fetch a context aware user (the user know what env we are testing!)
+- navigates to a url
+- performs operations using the selectors, no internal selectors!
+- performs a single clear unit of work
+
+this means this block is readable, extendable, and concise. these are the core tenets of useful and high quality poms!
+
+## use in a test
+
+let's look at an example test:
+
+```ts {9} title="weyoun/src/tests/smoke/login.spec.ts"
+import { Page } from "playwright";
+import { LoginPage } from "../../pom/login";
+import { AdminPage, AdminSelectors } from "../../pom/admin-page";
+
+const page: Page = global.page;
+
+describe("login", () => {
+  test("login succeeds", async () => {
+    const loginPage = new LoginPage(page);
+    const adminPage = new AdminPage(page);
+    await loginPage.login();
+    await adminPage.isShowing();
+    const welcomePanel = await page.$(AdminSelectors.welcome);
+    expect(await welcomePanel.innerText()).toContain("Welcome");
+  });
+});
+```
+
+you can see we create a new `LoginPage` instance passing the global `page` provided to us by `weyoun`. if that sentence sounds like gibberish, please reread the [test lifecycle](./test-lifecycle) post again!
+
+after it's initialized we can simply ask for the page to `login`. this makes the test very readable, concise, and easily reused.
+
+## pom to DOM
+
+this is the more complex part. when do you make a pom? how should they relate to the ui? fear not! i've got some basic guidelines:
+
+- a react component should probably have a sibling POM
+- a complex flow should be comprised of multiple smaller poms
+- if you're adding vital functionality, make it testable!
+
+these rough guidelines should provide enough context for you to get going!

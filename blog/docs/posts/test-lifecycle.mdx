@@ -1,0 +1,79 @@
+import Mermaid from "../../src/components/Mermaid";
+
+# test lifecycle
+
+we are using [jest](https://jestjs.io/docs/api) for our test runner, and specifically [jest circus](https://github.com/facebook/jest/blob/master/packages/jest-circus/README.md) for the core runner. this combination is allowing us to do some very specific setup of the environment, playwright, and ci jobs. let's take a peek at our jest config:
+
+```js
+module.exports = {
+  testRunner: "jest-circus/runner",
+  globalSetup: "<rootDir>/jest/setup.ts",
+  globalTeardown: "<rootDir>/jest/teardown.ts",
+  testEnvironment: "<rootDir>/jest/env.js",
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+};
+```
+
+let's talk about what each chunk does and how it relates to running a single test.
+
+## test lifecycle
+
+export const chart = `sequenceDiagram
+    participant S as Setup (globalSetup)
+    participant A as After Env (setupFilesAfterEnv)
+    participant E as Test Env (testEnvironment)
+    participant T as Teardown (globalTeardown)
+    S->>A: await the completion of globalSetup
+    A->>E: configure jest itself
+    loop Run A Single Test
+      E->>E: Test Env runs for each test file
+    end
+    E->>T: await teardown after all tests run
+`;
+
+<Mermaid chart={chart} />
+
+the order of operations above is important to understand. there are a few important details:
+
+- Setup and After Env run _once_ per jest run (once per time you start the tests)
+- Test Env runs before, during, and after _each_ single test file
+- the Setup and Teardown scripts share a `global` object
+
+## globalSetup
+
+in our test framework the default `yarn smoke:local` does a lot of heavy lifting. it's designed to start up the entire project locally, wait for everything to build, and validate it's healthy. once that's all done it persists the running process to the global object.
+
+this means in our ci we can simply run `yarn smoke:local` and the framework spins itself up and runs!
+
+## setupFilesAfterEnv
+
+this is configuring jest itself, upping default timeouts and handling the jest defaults in a way we'd prefer!
+
+## testEnvironment
+
+weyoun is a gracious runner, and aims to provide you with everything you need. knowing that we handle the setup and tear down of the playwright browser and page, and provide them to you on the global object at `page` and `browser`. shown simply:
+
+```ts {5} title="login.spec.ts"
+import { Page } from "playwright";
+import { LoginPage } from "../../pom/login";
+import { AdminPage, AdminSelectors } from "../../pom/admin-page";
+
+const page: Page = global.page;
+
+describe("login", () => {
+  test("login succeeds", async () => {
+    const loginPage = new LoginPage(page);
+    const adminPage = new AdminPage(page);
+    await loginPage.login();
+    await adminPage.isShowing();
+    const welcomePanel = await page.$(AdminSelectors.welcome);
+    expect(await welcomePanel.innerText()).toContain("Welcome");
+  });
+});
+```
+
+beyond that weyoun will automatically take a screenshot of any failure, and add it the the `img-out` folder. in a not too distant state it will even upload remote failures for you to debug!
+
+## globalTeardown
+
+this literally kills the app it spun up if it exists, and waits for the kill to complete.

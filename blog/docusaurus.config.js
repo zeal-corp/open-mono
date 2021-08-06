@@ -19,9 +19,9 @@ module.exports = {
       items: [
         {
           type: "doc",
-          docId: "posts/index",
+          docId: "posts/testing-at-zeal",
           position: "left",
-          label: "posts",
+          label: "latest post",
         },
         {
           type: "doc",
@@ -50,7 +50,7 @@ module.exports = {
           items: [
             {
               label: "latest",
-              to: "/docs/posts/index",
+              to: "/docs/posts/testing-at-zeal",
             },
           ],
         },
