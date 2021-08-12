@@ -1224,7 +1224,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "@yarnpkg/pnpify",
-        "npm:3.0.0-rc.14"
+        "npm:3.0.1"
       ],
       [
         "@yarnpkg/shell",
@@ -6313,7 +6313,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@types/node", "npm:14.17.7"],
-            ["@yarnpkg/pnpify", "npm:3.0.0-rc.14"],
+            ["@yarnpkg/pnpify", "npm:3.0.1"],
             ["eslint", "npm:7.32.0"],
             ["prettier", "npm:2.3.2"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
@@ -11813,6 +11813,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tslib", "npm:1.14.1"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:2.5.1", {
+          "packageLocation": "./.yarn/cache/@yarnpkg-fslib-npm-2.5.1-2c48d4e7b6-7dbf458b92.zip/node_modules/@yarnpkg/fslib/",
+          "packageDependencies": [
+            ["@yarnpkg/fslib", "npm:2.5.1"],
+            ["@yarnpkg/libzip", "npm:2.2.2"],
+            ["tslib", "npm:1.14.1"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["@yarnpkg/json-proxy", [
@@ -11873,12 +11882,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@yarnpkg/pnpify", [
-        ["npm:3.0.0-rc.14", {
-          "packageLocation": "./.yarn/cache/@yarnpkg-pnpify-npm-3.0.0-rc.14-d80744b2fa-2cd351268d.zip/node_modules/@yarnpkg/pnpify/",
+        ["npm:3.0.1", {
+          "packageLocation": "./.yarn/cache/@yarnpkg-pnpify-npm-3.0.1-907bfebab0-9657283360.zip/node_modules/@yarnpkg/pnpify/",
           "packageDependencies": [
-            ["@yarnpkg/pnpify", "npm:3.0.0-rc.14"],
+            ["@yarnpkg/pnpify", "npm:3.0.1"],
             ["@yarnpkg/core", "npm:3.0.0"],
-            ["@yarnpkg/fslib", "npm:2.5.0"],
+            ["@yarnpkg/fslib", "npm:2.5.1"],
             ["@yarnpkg/nm", "npm:2.4.1"],
             ["clipanion", "virtual:b644898db9d00f9f37d5eb44e36f20e9479b44afd1de161232b42c49fdda6d24ee83083e27e52420bf3b4985c46a47d2bef42581f5a599abf04e801793aa0916#npm:3.0.1"],
             ["cross-spawn", "npm:7.0.3"],
@@ -23022,7 +23031,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["open-mono", "workspace:."],
             ["@types/node", "npm:14.17.7"],
-            ["@yarnpkg/pnpify", "npm:3.0.0-rc.14"],
+            ["@yarnpkg/pnpify", "npm:3.0.1"],
             ["eslint", "npm:7.32.0"],
             ["prettier", "npm:2.3.2"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
