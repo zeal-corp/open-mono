@@ -1,0 +1,41 @@
+import Mermaid from "../../src/components/Mermaid";
+
+# Unit testing in beverly
+
+## Overview
+A crucial part of maintaining a component library is ensuring that components are reliable and consistently available. 
+To that end, we have to design an automated testing system that can account for generalized client use cases. 
+Since all of our components are redux based styled components we’ll be following the suggested 
+[redux recommendation](https://redux.js.org/usage/writing-tests) of “[using] integration tests for everything working together” 
+with unit tests reserved for “particularly complex reducers or selectors”. 
+
+Despite beverly being our overarching component library, we actually offer 2 sub classes of components, 
+simple stateless components (such as Buttons, Inputs, Tables) and more complex integrated components that are a 
+composition of the former and will most likely access zeal related data. In order for the stateless components to 
+function accurately they need to to work in a generic setting with arbitrary data, the integrated components on the 
+other hand will communicate with other parts of the zeal infrastructure. Our tests are differentiated in order to reflect 
+these two different use cases.
+
+## Tech
+For our basic components we want to ensure a level of functionality that can be covered by basic integration tests.
+In that regard the following libraries will suffice:
+1. Jest
+1. react testing library
+1. jest-fetch-mock
+1. Jest-dom
+
+Our complex integrated components will all be tested using weyoun to ensure access to other zeal services.
+
+## Approach
+
+When writing these tests there are a few questions we want to answer by the end of a test suite being run
+1. Does the component render?
+1. Does the component respond to state changes?
+1. Does the component trigger callbacks?
+1. Is the component customizable?
+1. Optionally: does the component communicate appropriately with the rest of our services.
+
+The goal with the small components should really be around the first four, each possible use case/state should be tested in an independent `test`. 
+
+## Examples
+```TODO```
