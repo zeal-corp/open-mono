@@ -1000,7 +1000,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "@types/history",
-        "npm:4.7.9"
+        "npm:4.7.11"
       ],
       [
         "@types/html-minifier-terser",
@@ -1068,7 +1068,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "@types/react-router-dom",
-        "npm:5.1.8"
+        "npm:5.3.3"
       ],
       [
         "@types/responselike",
@@ -11139,6 +11139,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/history", [
+        ["npm:4.7.11", {
+          "packageLocation": "./.yarn/cache/@types-history-npm-4.7.11-fe05d7b2e1-c92e2ba407.zip/node_modules/@types/history/",
+          "packageDependencies": [
+            ["@types/history", "npm:4.7.11"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:4.7.9", {
           "packageLocation": "./.yarn/cache/@types-history-npm-4.7.9-daa6588d04-556b062adb.zip/node_modules/@types/history/",
           "packageDependencies": [
@@ -11331,11 +11338,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/react-router-dom", [
-        ["npm:5.1.8", {
-          "packageLocation": "./.yarn/cache/@types-react-router-dom-npm-5.1.8-e62427075e-ff4af091f8.zip/node_modules/@types/react-router-dom/",
+        ["npm:5.3.3", {
+          "packageLocation": "./.yarn/cache/@types-react-router-dom-npm-5.3.3-9f687b5b3a-28c4ea4890.zip/node_modules/@types/react-router-dom/",
           "packageDependencies": [
-            ["@types/react-router-dom", "npm:5.1.8"],
-            ["@types/history", "npm:4.7.9"],
+            ["@types/react-router-dom", "npm:5.3.3"],
+            ["@types/history", "npm:4.7.11"],
             ["@types/react", "npm:17.0.15"],
             ["@types/react-router", "npm:5.1.16"]
           ],
@@ -13054,7 +13061,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.17.7"],
             ["@types/react", "npm:17.0.16"],
             ["@types/react-helmet", "npm:6.1.2"],
-            ["@types/react-router-dom", "npm:5.1.8"],
+            ["@types/react-router-dom", "npm:5.3.3"],
             ["@typescript-eslint/eslint-plugin", "virtual:f73d28f5b5c8d8fab8168972a87a7f4f4637bb920ff4b4f9837649e14663326b5798cab1bc1b77b798b6b8fac2feef76095f7cb4c41a474c672344b9f9dc823a#npm:4.29.0"],
             ["@typescript-eslint/parser", "virtual:f73d28f5b5c8d8fab8168972a87a7f4f4637bb920ff4b4f9837649e14663326b5798cab1bc1b77b798b6b8fac2feef76095f7cb4c41a474c672344b9f9dc823a#npm:4.29.0"],
             ["clsx", "npm:1.1.1"],
@@ -14518,7 +14525,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js", [
         ["npm:3.16.0", {
-          "packageLocation": "./.yarn/cache/core-js-npm-3.16.0-81e18c66e6-e215cf057f.zip/node_modules/core-js/",
+          "packageLocation": "./.yarn/unplugged/core-js-npm-3.16.0-81e18c66e6/node_modules/core-js/",
           "packageDependencies": [
             ["core-js", "npm:3.16.0"]
           ],
@@ -14538,7 +14545,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js-pure", [
         ["npm:3.16.0", {
-          "packageLocation": "./.yarn/cache/core-js-pure-npm-3.16.0-6a85251041-8d48180af8.zip/node_modules/core-js-pure/",
+          "packageLocation": "./.yarn/unplugged/core-js-pure-npm-3.16.0-6a85251041/node_modules/core-js-pure/",
           "packageDependencies": [
             ["core-js-pure", "npm:3.16.0"]
           ],
