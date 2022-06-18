@@ -3339,14 +3339,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.16":
-  version: 17.0.16
-  resolution: "@types/react@npm:17.0.16"
+"@types/react@npm:17.0.47":
+  version: 17.0.47
+  resolution: "@types/react@npm:17.0.47"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: cba60aeb284d4024feaca1364557fda72011e984b6b08f6e06a7cdc65e267eabc42d59c541ddbbb81720ab195b6df95a3535540abadd5c0e2cce26b16759dbaa
+  checksum: 2e7fe0eb630cb77da03b6da308c58728c01b38e878118e9ff5cd8045181c8d4f32dc936e328f46a62cadb56e1fe4c5a911b5113584f93a99e1f35df7f059246b
   languageName: node
   linkType: hard
 
@@ -4708,7 +4708,7 @@ __metadata:
     "@svgr/webpack": 5.5.0
     "@tsconfig/docusaurus": 1.0.2
     "@types/node": 14.17.7
-    "@types/react": 17.0.16
+    "@types/react": 17.0.47
     "@types/react-helmet": 6.1.2
     "@types/react-router-dom": 5.1.8
     "@typescript-eslint/eslint-plugin": 4.29.0
