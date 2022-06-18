@@ -4728,7 +4728,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "prettier",
-        "npm:2.3.2"
+        "npm:2.7.1"
       ],
       [
         "pretty-bytes",
@@ -6315,7 +6315,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.17.7"],
             ["@yarnpkg/pnpify", "npm:3.0.0-rc.14"],
             ["eslint", "npm:7.32.0"],
-            ["prettier", "npm:2.3.2"],
+            ["prettier", "npm:2.7.1"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
           ],
           "linkType": "SOFT",
@@ -13062,7 +13062,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-import", "virtual:f73d28f5b5c8d8fab8168972a87a7f4f4637bb920ff4b4f9837649e14663326b5798cab1bc1b77b798b6b8fac2feef76095f7cb4c41a474c672344b9f9dc823a#npm:2.23.4"],
             ["file-loader", "virtual:f73d28f5b5c8d8fab8168972a87a7f4f4637bb920ff4b4f9837649e14663326b5798cab1bc1b77b798b6b8fac2feef76095f7cb4c41a474c672344b9f9dc823a#npm:6.2.0"],
             ["mermaid", "npm:8.11.3"],
-            ["prettier", "npm:2.3.2"],
+            ["prettier", "npm:2.7.1"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:f73d28f5b5c8d8fab8168972a87a7f4f4637bb920ff4b4f9837649e14663326b5798cab1bc1b77b798b6b8fac2feef76095f7cb4c41a474c672344b9f9dc823a#npm:17.0.2"],
             ["semantic-release", "npm:17.4.4"],
@@ -14518,7 +14518,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js", [
         ["npm:3.16.0", {
-          "packageLocation": "./.yarn/cache/core-js-npm-3.16.0-81e18c66e6-e215cf057f.zip/node_modules/core-js/",
+          "packageLocation": "./.yarn/unplugged/core-js-npm-3.16.0-81e18c66e6/node_modules/core-js/",
           "packageDependencies": [
             ["core-js", "npm:3.16.0"]
           ],
@@ -14538,7 +14538,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js-pure", [
         ["npm:3.16.0", {
-          "packageLocation": "./.yarn/cache/core-js-pure-npm-3.16.0-6a85251041-8d48180af8.zip/node_modules/core-js-pure/",
+          "packageLocation": "./.yarn/unplugged/core-js-pure-npm-3.16.0-6a85251041/node_modules/core-js-pure/",
           "packageDependencies": [
             ["core-js-pure", "npm:3.16.0"]
           ],
@@ -23024,7 +23024,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:14.17.7"],
             ["@yarnpkg/pnpify", "npm:3.0.0-rc.14"],
             ["eslint", "npm:7.32.0"],
-            ["prettier", "npm:2.3.2"],
+            ["prettier", "npm:2.7.1"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
           ],
           "linkType": "SOFT",
@@ -24773,10 +24773,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["prettier", [
-        ["npm:2.3.2", {
-          "packageLocation": "./.yarn/cache/prettier-npm-2.3.2-4467ec48dc-17ce5784ac.zip/node_modules/prettier/",
+        ["npm:2.7.1", {
+          "packageLocation": "./.yarn/cache/prettier-npm-2.7.1-d1f40f5e1a-55a4409182.zip/node_modules/prettier/",
           "packageDependencies": [
-            ["prettier", "npm:2.3.2"]
+            ["prettier", "npm:2.7.1"]
           ],
           "linkType": "HARD",
         }]
