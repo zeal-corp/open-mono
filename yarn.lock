@@ -3096,10 +3096,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/docusaurus@npm:1.0.2":
-  version: 1.0.2
-  resolution: "@tsconfig/docusaurus@npm:1.0.2"
-  checksum: 4e6a3d25fad4e9cd39c69f742d3d5e2747f53faec24ecfe8d1c70843d18f307853e68d7be93e6616d1e6db0a5c7d3d5245bdf7c1c058de1725bc0e9471de54cf
+"@tsconfig/docusaurus@npm:1.0.6":
+  version: 1.0.6
+  resolution: "@tsconfig/docusaurus@npm:1.0.6"
+  checksum: fb0d7965c01fe64fc6369a72695b903d654bd5fb145f373d707c2bae3c2d828703517d812cef1c041ae44b108f44e52778b9d9837a54fdf782e68e6619a90a4d
   languageName: node
   linkType: hard
 
@@ -4706,7 +4706,7 @@ __metadata:
     "@semantic-release/npm": 7.0.8
     "@semantic-release/release-notes-generator": 9.0.1
     "@svgr/webpack": 5.5.0
-    "@tsconfig/docusaurus": 1.0.2
+    "@tsconfig/docusaurus": 1.0.6
     "@types/node": 14.17.7
     "@types/react": 17.0.16
     "@types/react-helmet": 6.1.2
