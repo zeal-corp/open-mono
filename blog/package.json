@@ -20,7 +20,7 @@
     "@docusaurus/core": "2.0.0-beta.ff31de0ff",
     "@docusaurus/preset-classic": "2.0.0-beta.ff31de0ff",
     "@mdx-js/react": "1.6.22",
-    "@react-three/fiber": "7.0.6",
+    "@react-three/fiber": "7.0.29",
     "@svgr/webpack": "5.5.0",
     "clsx": "1.1.1",
     "file-loader": "6.2.0",
