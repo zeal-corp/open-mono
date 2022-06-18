@@ -964,7 +964,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "@tsconfig/docusaurus",
-        "npm:1.0.2"
+        "npm:1.0.6"
       ],
       [
         "@types/cacheable-request",
@@ -11047,10 +11047,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@tsconfig/docusaurus", [
-        ["npm:1.0.2", {
-          "packageLocation": "./.yarn/cache/@tsconfig-docusaurus-npm-1.0.2-9e21433e90-4e6a3d25fa.zip/node_modules/@tsconfig/docusaurus/",
+        ["npm:1.0.6", {
+          "packageLocation": "./.yarn/cache/@tsconfig-docusaurus-npm-1.0.6-d84eda543a-fb0d7965c0.zip/node_modules/@tsconfig/docusaurus/",
           "packageDependencies": [
-            ["@tsconfig/docusaurus", "npm:1.0.2"]
+            ["@tsconfig/docusaurus", "npm:1.0.6"]
           ],
           "linkType": "HARD",
         }]
@@ -13050,7 +13050,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@semantic-release/npm", "virtual:f73d28f5b5c8d8fab8168972a87a7f4f4637bb920ff4b4f9837649e14663326b5798cab1bc1b77b798b6b8fac2feef76095f7cb4c41a474c672344b9f9dc823a#npm:7.0.8"],
             ["@semantic-release/release-notes-generator", "virtual:f73d28f5b5c8d8fab8168972a87a7f4f4637bb920ff4b4f9837649e14663326b5798cab1bc1b77b798b6b8fac2feef76095f7cb4c41a474c672344b9f9dc823a#npm:9.0.1"],
             ["@svgr/webpack", "npm:5.5.0"],
-            ["@tsconfig/docusaurus", "npm:1.0.2"],
+            ["@tsconfig/docusaurus", "npm:1.0.6"],
             ["@types/node", "npm:14.17.7"],
             ["@types/react", "npm:17.0.16"],
             ["@types/react-helmet", "npm:6.1.2"],
@@ -14518,7 +14518,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js", [
         ["npm:3.16.0", {
-          "packageLocation": "./.yarn/cache/core-js-npm-3.16.0-81e18c66e6-e215cf057f.zip/node_modules/core-js/",
+          "packageLocation": "./.yarn/unplugged/core-js-npm-3.16.0-81e18c66e6/node_modules/core-js/",
           "packageDependencies": [
             ["core-js", "npm:3.16.0"]
           ],
@@ -14538,7 +14538,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js-pure", [
         ["npm:3.16.0", {
-          "packageLocation": "./.yarn/cache/core-js-pure-npm-3.16.0-6a85251041-8d48180af8.zip/node_modules/core-js-pure/",
+          "packageLocation": "./.yarn/unplugged/core-js-pure-npm-3.16.0-6a85251041/node_modules/core-js-pure/",
           "packageDependencies": [
             ["core-js-pure", "npm:3.16.0"]
           ],
