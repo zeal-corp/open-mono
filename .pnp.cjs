@@ -5732,7 +5732,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "three",
-        "npm:0.131.3"
+        "npm:0.142.0"
       ],
       [
         "through",
@@ -10499,7 +10499,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-use-measure", "virtual:23c6b699f3674cf09345ec18854ebcac5f505b26a13df37713e9e59ce69b30778249a055e1a1a63bc6643fb772ea27d8d98f857093105ce6fba868a5cd5c48df#npm:2.0.4"],
             ["resize-observer-polyfill", "npm:1.5.1"],
             ["scheduler", "npm:0.20.2"],
-            ["three", "npm:0.131.3"],
+            ["three", "npm:0.142.0"],
             ["use-asset", "virtual:23c6b699f3674cf09345ec18854ebcac5f505b26a13df37713e9e59ce69b30778249a055e1a1a63bc6643fb772ea27d8d98f857093105ce6fba868a5cd5c48df#npm:1.0.4"],
             ["utility-types", "npm:3.10.0"],
             ["zustand", "virtual:23c6b699f3674cf09345ec18854ebcac5f505b26a13df37713e9e59ce69b30778249a055e1a1a63bc6643fb772ea27d8d98f857093105ce6fba868a5cd5c48df#npm:3.5.7"]
@@ -13067,7 +13067,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:f73d28f5b5c8d8fab8168972a87a7f4f4637bb920ff4b4f9837649e14663326b5798cab1bc1b77b798b6b8fac2feef76095f7cb4c41a474c672344b9f9dc823a#npm:17.0.2"],
             ["semantic-release", "npm:17.4.4"],
             ["semantic-release-monorepo", "virtual:f73d28f5b5c8d8fab8168972a87a7f4f4637bb920ff4b4f9837649e14663326b5798cab1bc1b77b798b6b8fac2feef76095f7cb4c41a474c672344b9f9dc823a#npm:7.0.5"],
-            ["three", "npm:0.131.3"],
+            ["three", "npm:0.142.0"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"],
             ["url-loader", "virtual:f73d28f5b5c8d8fab8168972a87a7f4f4637bb920ff4b4f9837649e14663326b5798cab1bc1b77b798b6b8fac2feef76095f7cb4c41a474c672344b9f9dc823a#npm:4.1.1"]
           ],
@@ -14518,7 +14518,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js", [
         ["npm:3.16.0", {
-          "packageLocation": "./.yarn/cache/core-js-npm-3.16.0-81e18c66e6-e215cf057f.zip/node_modules/core-js/",
+          "packageLocation": "./.yarn/unplugged/core-js-npm-3.16.0-81e18c66e6/node_modules/core-js/",
           "packageDependencies": [
             ["core-js", "npm:3.16.0"]
           ],
@@ -14538,7 +14538,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js-pure", [
         ["npm:3.16.0", {
-          "packageLocation": "./.yarn/cache/core-js-pure-npm-3.16.0-6a85251041-8d48180af8.zip/node_modules/core-js-pure/",
+          "packageLocation": "./.yarn/unplugged/core-js-pure-npm-3.16.0-6a85251041/node_modules/core-js-pure/",
           "packageDependencies": [
             ["core-js-pure", "npm:3.16.0"]
           ],
@@ -28295,10 +28295,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["three", [
-        ["npm:0.131.3", {
-          "packageLocation": "./.yarn/cache/three-npm-0.131.3-a5c7e208a1-9473082980.zip/node_modules/three/",
+        ["npm:0.142.0", {
+          "packageLocation": "./.yarn/cache/three-npm-0.142.0-f288e3cfa0-b920987cab.zip/node_modules/three/",
           "packageDependencies": [
-            ["three", "npm:0.131.3"]
+            ["three", "npm:0.142.0"]
           ],
           "linkType": "HARD",
         }]
