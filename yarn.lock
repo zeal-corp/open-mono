@@ -3242,10 +3242,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:14.17.7":
-  version: 14.17.7
-  resolution: "@types/node@npm:14.17.7"
-  checksum: e95f28361784106237380ebd4ed133bc9d6aa04694bd061bd913d9008ce88bd596b059464fa56cf534c0cb347a3a9753b8abdf7c85d24a77126bf0ad24c6fdf9
+"@types/node@npm:14.18.22":
+  version: 14.18.22
+  resolution: "@types/node@npm:14.18.22"
+  checksum: 5cec8276b834b8988f0af69655423e816729a5757d2015a3199156bdc98ea55206338fad752b26236c55d431dce24eb973b4f5a8918f8e6b17056ffcc12edc08
   languageName: node
   linkType: hard
 
@@ -4707,7 +4707,7 @@ __metadata:
     "@semantic-release/release-notes-generator": 9.0.1
     "@svgr/webpack": 5.5.0
     "@tsconfig/docusaurus": 1.0.2
-    "@types/node": 14.17.7
+    "@types/node": 14.18.22
     "@types/react": 17.0.16
     "@types/react-helmet": 6.1.2
     "@types/react-router-dom": 5.1.8
@@ -13577,7 +13577,7 @@ fsevents@~2.3.2:
   version: 0.0.0-use.local
   resolution: "open-mono@workspace:."
   dependencies:
-    "@types/node": 14.17.7
+    "@types/node": 14.18.22
     "@yarnpkg/pnpify": 3.0.0-rc.14
     eslint: 7.32.0
     prettier: 2.3.2
