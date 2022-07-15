@@ -1032,7 +1032,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "@types/node",
-        "npm:14.17.7"
+        "npm:14.18.22"
       ],
       [
         "@types/normalize-package-data",
@@ -6312,7 +6312,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
-            ["@types/node", "npm:14.17.7"],
+            ["@types/node", "npm:14.18.22"],
             ["@yarnpkg/pnpify", "npm:3.0.0-rc.14"],
             ["eslint", "npm:7.32.0"],
             ["prettier", "npm:2.3.2"],
@@ -11220,10 +11220,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:14.17.7", {
-          "packageLocation": "./.yarn/cache/@types-node-npm-14.17.7-021f33689c-e95f283617.zip/node_modules/@types/node/",
+        ["npm:14.18.22", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-14.18.22-1421b0e35d-5cec8276b8.zip/node_modules/@types/node/",
           "packageDependencies": [
-            ["@types/node", "npm:14.17.7"]
+            ["@types/node", "npm:14.18.22"]
           ],
           "linkType": "HARD",
         }],
@@ -13051,7 +13051,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@semantic-release/release-notes-generator", "virtual:f73d28f5b5c8d8fab8168972a87a7f4f4637bb920ff4b4f9837649e14663326b5798cab1bc1b77b798b6b8fac2feef76095f7cb4c41a474c672344b9f9dc823a#npm:9.0.1"],
             ["@svgr/webpack", "npm:5.5.0"],
             ["@tsconfig/docusaurus", "npm:1.0.2"],
-            ["@types/node", "npm:14.17.7"],
+            ["@types/node", "npm:14.18.22"],
             ["@types/react", "npm:17.0.16"],
             ["@types/react-helmet", "npm:6.1.2"],
             ["@types/react-router-dom", "npm:5.1.8"],
@@ -14518,7 +14518,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js", [
         ["npm:3.16.0", {
-          "packageLocation": "./.yarn/cache/core-js-npm-3.16.0-81e18c66e6-e215cf057f.zip/node_modules/core-js/",
+          "packageLocation": "./.yarn/unplugged/core-js-npm-3.16.0-81e18c66e6/node_modules/core-js/",
           "packageDependencies": [
             ["core-js", "npm:3.16.0"]
           ],
@@ -14538,7 +14538,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js-pure", [
         ["npm:3.16.0", {
-          "packageLocation": "./.yarn/cache/core-js-pure-npm-3.16.0-6a85251041-8d48180af8.zip/node_modules/core-js-pure/",
+          "packageLocation": "./.yarn/unplugged/core-js-pure-npm-3.16.0-6a85251041/node_modules/core-js-pure/",
           "packageDependencies": [
             ["core-js-pure", "npm:3.16.0"]
           ],
@@ -23021,7 +23021,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["open-mono", "workspace:."],
-            ["@types/node", "npm:14.17.7"],
+            ["@types/node", "npm:14.18.22"],
             ["@yarnpkg/pnpify", "npm:3.0.0-rc.14"],
             ["eslint", "npm:7.32.0"],
             ["prettier", "npm:2.3.2"],
