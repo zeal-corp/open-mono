@@ -884,7 +884,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "@sideway/formula",
-        "npm:3.0.0"
+        "npm:3.0.1"
       ],
       [
         "@sideway/pinpoint",
@@ -10824,10 +10824,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@sideway/formula", [
-        ["npm:3.0.0", {
-          "packageLocation": "./.yarn/cache/@sideway-formula-npm-3.0.0-8688cb96b6-8ae26a0ed6.zip/node_modules/@sideway/formula/",
+        ["npm:3.0.1", {
+          "packageLocation": "./.yarn/cache/@sideway-formula-npm-3.0.1-ee371b2ddf-e4beeebc9d.zip/node_modules/@sideway/formula/",
           "packageDependencies": [
-            ["@sideway/formula", "npm:3.0.0"]
+            ["@sideway/formula", "npm:3.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -14518,7 +14518,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js", [
         ["npm:3.16.0", {
-          "packageLocation": "./.yarn/cache/core-js-npm-3.16.0-81e18c66e6-e215cf057f.zip/node_modules/core-js/",
+          "packageLocation": "./.yarn/unplugged/core-js-npm-3.16.0-81e18c66e6/node_modules/core-js/",
           "packageDependencies": [
             ["core-js", "npm:3.16.0"]
           ],
@@ -14538,7 +14538,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js-pure", [
         ["npm:3.16.0", {
-          "packageLocation": "./.yarn/cache/core-js-pure-npm-3.16.0-6a85251041-8d48180af8.zip/node_modules/core-js-pure/",
+          "packageLocation": "./.yarn/unplugged/core-js-pure-npm-3.16.0-6a85251041/node_modules/core-js-pure/",
           "packageDependencies": [
             ["core-js-pure", "npm:3.16.0"]
           ],
@@ -19853,7 +19853,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@hapi/hoek", "npm:9.2.0"],
             ["@hapi/topo", "npm:5.1.0"],
             ["@sideway/address", "npm:4.1.2"],
-            ["@sideway/formula", "npm:3.0.0"],
+            ["@sideway/formula", "npm:3.0.1"],
             ["@sideway/pinpoint", "npm:2.0.0"]
           ],
           "linkType": "HARD",
