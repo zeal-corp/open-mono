@@ -5892,7 +5892,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "ua-parser-js",
-        "npm:0.7.28"
+        "npm:0.7.35"
       ],
       [
         "uglify-js",
@@ -14518,7 +14518,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js", [
         ["npm:3.16.0", {
-          "packageLocation": "./.yarn/cache/core-js-npm-3.16.0-81e18c66e6-e215cf057f.zip/node_modules/core-js/",
+          "packageLocation": "./.yarn/unplugged/core-js-npm-3.16.0-81e18c66e6/node_modules/core-js/",
           "packageDependencies": [
             ["core-js", "npm:3.16.0"]
           ],
@@ -14538,7 +14538,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js-pure", [
         ["npm:3.16.0", {
-          "packageLocation": "./.yarn/cache/core-js-pure-npm-3.16.0-6a85251041-8d48180af8.zip/node_modules/core-js-pure/",
+          "packageLocation": "./.yarn/unplugged/core-js-pure-npm-3.16.0-6a85251041/node_modules/core-js-pure/",
           "packageDependencies": [
             ["core-js-pure", "npm:3.16.0"]
           ],
@@ -16996,7 +16996,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["object-assign", "npm:4.1.1"],
             ["promise", "npm:7.3.1"],
             ["setimmediate", "npm:1.0.5"],
-            ["ua-parser-js", "npm:0.7.28"]
+            ["ua-parser-js", "npm:0.7.35"]
           ],
           "linkType": "HARD",
         }]
@@ -28768,10 +28768,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["ua-parser-js", [
-        ["npm:0.7.28", {
-          "packageLocation": "./.yarn/cache/ua-parser-js-npm-0.7.28-83c4e4d878-a7da4ad545.zip/node_modules/ua-parser-js/",
+        ["npm:0.7.35", {
+          "packageLocation": "./.yarn/cache/ua-parser-js-npm-0.7.35-86878e42a4-0a332e8d72.zip/node_modules/ua-parser-js/",
           "packageDependencies": [
-            ["ua-parser-js", "npm:0.7.28"]
+            ["ua-parser-js", "npm:0.7.35"]
           ],
           "linkType": "HARD",
         }]
